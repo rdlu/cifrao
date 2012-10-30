@@ -11,7 +11,25 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121017151007) do
+ActiveRecord::Schema.define(:version => 20121029235550) do
+
+  create_table "conta", :force => true do |t|
+    t.string   "agencia"
+    t.string   "nro_conta"
+    t.float    "saldo"
+    t.integer  "entidades_id"
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
+  end
+
+  add_index "conta", ["entidades_id"], :name => "index_conta_on_entidades_id"
+
+  create_table "entidades", :force => true do |t|
+    t.string   "cnpj_cpf"
+    t.string   "nome"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email"
