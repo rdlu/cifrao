@@ -25,7 +25,7 @@
   </div>
   <div class="field">
     <%= f.label :entidades_id %><br />
-    <%= f.text_field :entidades_id %>
+    <%= f.select :entidades_id, @entidades.collect { |e| [e.nome, e.id]}%>
   </div>
   <div class="actions">
     <%= f.submit %>
