@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  valor: 1.5
+  descricao: MyString
+  conta_origem: 
+  conta_destino: 
+
+two:
+  valor: 1.5
+  descricao: MyString
+  conta_origem: 
+  conta_destino: 
