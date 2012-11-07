@@ -22,6 +22,10 @@
     <td><%= link_to 'Destroy', despesa, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
+  <tr>
+    <td>Total:</td>
+    <td><%= @despesas.sum(&:valor) %></td>		
+  </tr>
 </table>
 
 <br />

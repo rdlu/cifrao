@@ -1,4 +1,6 @@
 Cifrao::Application.routes.draw do
+  resources :receita
+
   get "welcome/index"
 
   resources :despesas
