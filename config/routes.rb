@@ -1,4 +1,10 @@
 Cifrao::Application.routes.draw do
+  resources :despesas
+
+  resources :conta
+
+  resources :entidades
+
   get "sessions/new"
 
   get "sessions/create"

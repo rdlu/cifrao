@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Valor:</b>
+  <%= @despesa.valor %>
+</p>
+
+<p>
+  <b>Descricao:</b>
+  <%= @despesa.descricao %>
+</p>
+
+<p>
+  <b>Conta origem:</b>
+  <%= @despesa.conta_origem_id %>
+</p>
+
+<p>
+  <b>Conta destino:</b>
+  <%= @despesa.conta_destino_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_despesa_path(@despesa) %> |
+<%= link_to 'Back', despesas_path %>

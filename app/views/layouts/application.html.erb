@@ -22,10 +22,22 @@
         <span class="icon-bar"></span>
       </a>
       <a class="brand" href="#">Cifrão</a>
-      <div class="nav-collapse">
-        <ul class="nav">
-          <li><%= link_to "Movimentações" %></li>
-          <li><%= link_to "Contas" %></li>
+      <div class="nav-collapse collapse">
+        <ul class="nav pull-right">
+          <li class="dropdown open">	  
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown">Movimentações <b class="caret"></b></a>			
+			<ul class="dropdown-menu">
+				<li><%= link_to "Receitas" %></li>
+	            <li><%= link_to "Despesas", despesas_path %></li>
+			</ul>
+		  </li> 
+		  <li class="dropdown open">	  
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown">Cadastro <b class="caret"></b></a>			
+			<ul class="dropdown-menu">
+				<li><%= link_to "Contas", conta_path %></li>
+	            <li><%= link_to "Entidades", entidades_path %></li>
+			</ul>
+		  </li> 
           <li><%= link_to "Preferências" %></li>
           <li><%= link_to "Sair" %></li>
         </ul>

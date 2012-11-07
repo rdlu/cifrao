@@ -1,0 +1,29 @@
+<h1>Listing conta</h1>
+
+<table>
+  <tr>
+    <th>Agencia</th>
+    <th>Nro conta</th>
+    <th>Saldo</th>
+    <th>Entidades</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @conta.each do |contum| %>
+  <tr>
+    <td><%= contum.agencia %></td>
+    <td><%= contum.nro_conta %></td>
+    <td><%= contum.saldo %></td>
+    <td><%= contum.entidades_id %></td>
+    <td><%= link_to 'Show', contum %></td>
+    <td><%= link_to 'Edit', edit_contum_path(contum) %></td>
+    <td><%= link_to 'Destroy', contum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Contum', new_contum_path %>

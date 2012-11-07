@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  agencia: MyString
+  nro_conta: MyString
+  saldo: 1.5
+  entidades: 
+
+two:
+  agencia: MyString
+  nro_conta: MyString
+  saldo: 1.5
+  entidades: 

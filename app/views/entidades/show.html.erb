@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Cnpj cpf:</b>
+  <%= @entidade.cnpj_cpf %>
+</p>
+
+<p>
+  <b>Nome:</b>
+  <%= @entidade.nome %>
+</p>
+
+
+<%= link_to 'Edit', edit_entidade_path(@entidade) %> |
+<%= link_to 'Back', entidades_path %>
