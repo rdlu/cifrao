@@ -1,4 +1,6 @@
 Cifrao::Application.routes.draw do
+  get "welcome/index"
+
   resources :despesas
 
   resources :conta
@@ -16,6 +18,8 @@ Cifrao::Application.routes.draw do
   get "users/create"
   resources :users
   resources :sessions
+
+  match 'sessions/index' => 'sessions#new'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
