@@ -1,0 +1,33 @@
+<h1>Listing receita</h1>
+
+<table>
+  <tr>
+    <th>Valor</th>
+    <th>Descricao</th>
+    <th>Conta origem receita</th>
+    <th>Conta destino receita</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @receita.each do |receitum| %>
+  <tr>
+    <td><%= receitum.valor %></td>
+    <td><%= receitum.descricao %></td>
+    <td><%= receitum.conta_origem_receita_id %></td>
+    <td><%= receitum.conta_destino_receita_id %></td>
+    <td><%= link_to 'Show', receitum %></td>
+    <td><%= link_to 'Edit', edit_receitum_path(receitum) %></td>
+    <td><%= link_to 'Destroy', receitum, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+  <tr>
+    <td>Total:</td>
+    <td><%= @receita.sum(&:valor) %></td>		
+  </tr>
+</table>
+
+<br />
+
+<%= link_to 'New Receitum', new_receitum_path %>

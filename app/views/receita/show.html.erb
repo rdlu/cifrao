@@ -1,0 +1,25 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Valor:</b>
+  <%= @receitum.valor %>
+</p>
+
+<p>
+  <b>Descricao:</b>
+  <%= @receitum.descricao %>
+</p>
+
+<p>
+  <b>Conta origem receita:</b>
+  <%= @receitum.conta_origem_receita_id %>
+</p>
+
+<p>
+  <b>Conta destino receita:</b>
+  <%= @receitum.conta_destino_receita_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_receitum_path(@receitum) %> |
+<%= link_to 'Back', receita_path %>
