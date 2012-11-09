@@ -15,8 +15,10 @@
   <tr>
     <td><%= despesa.valor %></td>
     <td><%= despesa.descricao %></td>
-    <td><%= despesa.conta_origem_id %></td>
-    <td><%= despesa.conta_destino_id %></td>
+    <td><%= Contum.find(despesa.conta_origem_id).agencia %>
+        <%= Contum.find(despesa.conta_origem_id).nro_conta %></td>
+    <td><%= Contum.find(despesa.conta_destino_id).agencia %>
+        <%= Contum.find(despesa.conta_destino_id).nro_conta %></td>
     <td><%= link_to 'Show', despesa %></td>
     <td><%= link_to 'Edit', edit_despesa_path(despesa) %></td>
     <td><%= link_to 'Destroy', despesa, method: :delete, data: { confirm: 'Are you sure?' } %></td>

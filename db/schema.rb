@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121107160347) do
+ActiveRecord::Schema.define(:version => 20121109153402) do
 
   create_table "conta", :force => true do |t|
     t.string   "agencia"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(:version => 20121107160347) do
     t.datetime "created_at",   :null => false
     t.datetime "updated_at",   :null => false
     t.string   "descricao"
+    t.string   "alias"
   end
 
   add_index "conta", ["entidades_id"], :name => "index_conta_on_entidades_id"

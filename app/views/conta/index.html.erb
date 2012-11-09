@@ -4,6 +4,7 @@
   <tr>
     <th>Agencia</th>
     <th>Nro conta</th>
+    <th>Alias</th>
     <th>Saldo</th>
     <th>Entidades</th>
     <th></th>
@@ -15,8 +16,9 @@
   <tr>
     <td><%= contum.agencia %></td>
     <td><%= contum.nro_conta %></td>
+    <td><%= contum.alias %></td>
     <td><%= contum.saldo %></td>
-    <td><%= contum.entidades_id %></td>
+    <td><%= Entidade.find(contum.entidades_id).nome %></td>
     <td><%= link_to 'Show', contum %></td>
     <td><%= link_to 'Edit', edit_contum_path(contum) %></td>
     <td><%= link_to 'Destroy', contum, method: :delete, data: { confirm: 'Are you sure?' } %></td>

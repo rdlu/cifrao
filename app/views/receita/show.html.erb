@@ -12,12 +12,14 @@
 
 <p>
   <b>Conta origem receita:</b>
-  <%= @receitum.conta_origem_receita_id %>
+  <%= Contum.find(@receitum.conta_origem_receita_id).agencia %>
+  <%= Contum.find(@receitum.conta_origem_receita_id).nro_conta %>
 </p>
 
 <p>
   <b>Conta destino receita:</b>
-  <%= @receitum.conta_destino_receita_id %>
+  <%= Contum.find(@receitum.conta_destino_receita_id).agencia %>
+  <%= Contum.find(@receitum.conta_destino_receita_id).nro_conta %>
 </p>
 
 

@@ -12,12 +12,14 @@
 
 <p>
   <b>Conta origem:</b>
-  <%= @despesa.conta_origem_id %>
+  <%= Contum.find(@despesa.conta_origem_id).agencia %>
+  <%= Contum.find(@despesa.conta_origem_id).nro_conta %>
 </p>
 
 <p>
   <b>Conta destino:</b>
-  <%= @despesa.conta_destino_id %>
+  <%= Contum.find(@despesa.conta_destino_id).agencia %>
+  <%= Contum.find(@despesa.conta_destino_id).nro_conta %>
 </p>
 
 
