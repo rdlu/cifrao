@@ -15,8 +15,10 @@
   <tr>
     <td><%= receitum.valor %></td>
     <td><%= receitum.descricao %></td>
-    <td><%= receitum.conta_origem_receita_id %></td>
-    <td><%= receitum.conta_destino_receita_id %></td>
+    <td><%= Contum.find(receitum.conta_origem_receita_id).agencia %>
+        <%= Contum.find(receitum.conta_origem_receita_id).nro_conta %></td>
+    <td><%= Contum.find(receitum.conta_destino_receita_id).agencia %>
+        <%= Contum.find(receitum.conta_destino_receita_id).nro_conta %></td>
     <td><%= link_to 'Show', receitum %></td>
     <td><%= link_to 'Edit', edit_receitum_path(receitum) %></td>
     <td><%= link_to 'Destroy', receitum, method: :delete, data: { confirm: 'Are you sure?' } %></td>

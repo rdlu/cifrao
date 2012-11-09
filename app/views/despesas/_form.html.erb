@@ -21,11 +21,11 @@
   </div>
   <div class="field">
     <%= f.label :conta_origem %><br />
-    <%= f.text_field :conta_origem_id %>
+    <%= f.select :conta_origem_id, Contum.all.collect{|c| [c.nro_conta, c.id]} %>
   </div>
   <div class="field">
     <%= f.label :conta_destino %><br />
-    <%= f.text_field :conta_destino_id %>
+    <%= f.select :conta_destino_id, Contum.all.collect{|c| [c.nro_conta, c.id]} %>
   </div>
   <div class="actions">
     <%= f.submit %>

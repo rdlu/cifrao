@@ -3,6 +3,7 @@ class DespesasController < ApplicationController
   # GET /despesas.json
   def index
     @despesas = Despesa.all
+    @contum = Contum.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -14,7 +15,6 @@ class DespesasController < ApplicationController
   # GET /despesas/1.json
   def show
     @despesa = Despesa.find(params[:id])
-
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @despesa }

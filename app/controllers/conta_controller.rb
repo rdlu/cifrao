@@ -25,7 +25,7 @@ class ContaController < ApplicationController
   # GET /conta/new.json
   def new
     @contum = Contum.new
-	@entidades = Entidade.all
+	  @entidades = Entidade.all
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @contum }
@@ -35,7 +35,7 @@ class ContaController < ApplicationController
   # GET /conta/1/edit
   def edit
     @contum = Contum.find(params[:id])
-	@entidades = Entidade.all
+	  @entidades = Entidade.all
   end
 
   # POST /conta

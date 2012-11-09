@@ -25,6 +25,7 @@ class ReceitaController < ApplicationController
   # GET /receita/new.json
   def new
     @receitum = Receitum.new
+    @contum = Contum.all
 
     respond_to do |format|
       format.html # new.html.erb
@@ -35,6 +36,7 @@ class ReceitaController < ApplicationController
   # GET /receita/1/edit
   def edit
     @receitum = Receitum.find(params[:id])
+    @contum = Contum.all
   end
 
   # POST /receita
