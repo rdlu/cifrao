@@ -1,6 +1,10 @@
-<h1>Welcome#index</h1>
+<h1>Bem vindo ao Cifrão</h1>
+<h3>Seu sistema de controle financeiro</h3>
+
+<p>Esta é a tela de boas vindas para usuários não autenticados.
+
+<%= link_to "Autentique", new_session_path %> para acessar sua conta!</p>
+<br />
+<%= link_to "Entrar no Sistema", new_session_path, :class => 'btn btn-primary btn-large', :style => 'color: white;' %>
+
 <p>Find me in app/views/welcome/index.html.erb</p>
-
-Esta é a tela de boas vindas para usuários não autenticados.
-
-<%= link_to "Autentique", new_session_path %> para acessar sua conta!
