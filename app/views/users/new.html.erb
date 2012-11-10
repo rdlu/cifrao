@@ -1,27 +1,31 @@
-<h1>Cadastro</h1>
-
-<%= form_for @user do |f| %>
-    <% if @user.errors.any? %>
-        <div class="alert alert-error">
-          <ul>
-            <% for message in @user.errors.full_messages %>
-                <li><%= message %></li>
-            <% end %>
-          </ul>
+<div class="row-fluid" style="text-align: center;">
+  <h1>Cadastre-se</h1>
+  <h3>Não há dúvida: você vai curtir!</h3>
+</div>
+<div class="row-fluid">
+  <div class="span4 offset4">
+    <%= form_for @user do |f| %>
+        <% if @user.errors.any? %>
+            <div class="alert alert-error">
+              <ul>
+                <% for message in @user.errors.full_messages %>
+                    <li><%= message %></li>
+                <% end %>
+              </ul>
+            </div>
+        <% end %>
+        <div class="field">
+          <%= f.text_field :email, :placeholder => "Digite seu E-Mail", :class => 'input-block-level' %>
         </div>
+        <div class="field">
+          <%= f.password_field :password, :placeholder => "Digite uma senha", :class => 'input-block-level' %>
+        </div>
+        <div class="field">
+          <%= f.password_field :password_confirmation, :placeholder => "Repita a mesma senha", :class => 'input-block-level' %>
+        </div>
+        <div class="actions"><%= f.submit 'Cadastrar!', :class => 'btn btn-primary btn-large btn-block' %></div>
     <% end %>
-    <div class="field">
-      <%= f.label :email %>
-      <%= f.text_field :email %>
-    </div>
-    <div class="field">
-      <%= f.label :password %>
-      <%= f.password_field :password %>
-    </div>
-    <div class="field">
-      <%= f.label :password_confirmation %>
-      <%= f.password_field :password_confirmation %>
-    </div>
-    <div class="actions"><%= f.submit 'Cadastrar!', :class => 'btn btn-primary btn-large' %></div>
-<% end %>
+  </div>
+</div>
+
 
